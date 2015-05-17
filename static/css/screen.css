@@ -37,12 +37,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
 blockquote, q {
     quotes: none;
 }
@@ -234,6 +228,9 @@ nav {
     list-style: none;
     margin: 0 0 0 3em;
     padding: 0;
+}
+nav ul {
+    list-style: none;
 }
 nav li {
     float: left;

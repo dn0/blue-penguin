@@ -46,7 +46,8 @@
     <header>
         {% if DISPLAY_MENU %}
         <nav>
-            {% block ephemeral_nav %}{% endblock %}
+            <ul>
+                {% block ephemeral_nav %}{% endblock %}
                 {% if DISPLAY_HOME %}
                 <li{% if output_file == "index.html" %} class="selected"{% endif %}><a href="{{ SITEURL }}">Home</a></li>
                 {% endif %}
@@ -61,6 +62,7 @@
                 {% for name, link, file in MENU_INTERNAL_PAGES %}
                 <li{% if output_file == file %} class="selected"{% endif %}><a href="{{ SITEURL }}/{{ link }}">{{ name }}</a></li>
                 {% endfor %}
+            </ul>
         </nav>
         {% endif %}
         <div class="header_box">
