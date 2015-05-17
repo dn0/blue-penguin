@@ -1,0 +1,32 @@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script src="{{ SITEURL }}/theme/js/jquery.jscroll.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var FIRST_PREV;
+
+      $(function() {
+        FIRST_PREV = $('a.prev_page');
+
+        $('#container').jscroll({
+          loadingHtml: null,
+          padding: 1,
+          autoTriggerUntil: {{ INFINITE_SCROLL }},
+          nextSelector: 'a.next_page',
+          contentSelector: 'div.content',
+          pagingSelector: false,
+          callbackBefore: function(next) {
+            next.parent().find('span').html('Loading page '+ next.data('next_page') +' of '+ next.data('num_pages') +' ...');
+          },
+          callbackAfter: function(prev, next) {
+            prev.parent().remove();
+
+            if (FIRST_PREV.length) {
+                FIRST_PREV.replaceAll($('a.prev_page'));
+            } else if (next.length) {
+                next.parent().find('a.prev_page').remove();
+            } else {
+                $('div.pages').remove();
+            }
+          }
+        });
+      });
+    </script>

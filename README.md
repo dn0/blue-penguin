@@ -18,6 +18,9 @@ MENU_INTERNAL_PAGES = (
 MENUITEMS = (
 	#('GitHub', 'https://github.com/'),
 )
+# Enable infinite scrolling (using https://github.com/pklauzinski/jscroll)
+# Set to an integer to enable. Auto scrolling will be disabled after this number of pages is loaded.
+INFINITE_SCROLL = None
 ```
 
 ## Contributors

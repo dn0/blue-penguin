@@ -71,9 +71,9 @@
         </div>
     </header>
     {% endif %}
-    <div id="wrapper">
-        <div id="content">
-            {%- block content -%}{%- endblock %}
+    <div id="container">
+        <div class="content">
+            {% block content %}{% endblock %}
 
             {% if DISPLAY_FOOTER %}
             <div class="clear"></div>
@@ -95,6 +95,9 @@
         </div>
         <div class="clear"></div>
     </div>
-{% include 'analytics.html' %}
+
+    {% if INFINITE_SCROLL %}{% include 'infinite_scroll.html' %}{% endif %}
+    {% if GOOGLE_ANALYTICS %}{% include 'analytics.html' %}{% endif %}
+
 </body>
 </html>
