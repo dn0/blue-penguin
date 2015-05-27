@@ -58,8 +58,15 @@ body {
 }
 
 header, #container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (min-width: 920px) {
+  header, #container {
     width: 910px;
     margin: auto;
+  }
 }
 
 a {
@@ -167,13 +174,22 @@ td.code {
     color: #586E75;
 }
 
+@media (max-width: 639px) {
+  .post {
+    margin-left: 30px;
+  }
+
+  .date {
+    float: none;
+    width: auto;
+    font-size: 1.2em;
+  }
+}
+
 img {
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 0.3em;
     max-width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /*sub and sup stolen from Twitter bootstrap.*/
