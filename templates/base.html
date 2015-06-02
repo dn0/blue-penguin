@@ -7,6 +7,8 @@
 <head>
     {% block head %}
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, minimal-ui">
+    <meta name="generator" content="Pelican" />
     <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
     {# favicon #}
     <link rel="shortcut icon" type="image/png" href="{{ SITEURL }}/favicon.png">
@@ -38,7 +40,6 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/screen.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" type="text/css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/print.css" type="text/css" media="print" />
-    <meta name="generator" content="Pelican" />
     {% endblock head %}
 </head>
 <body>
