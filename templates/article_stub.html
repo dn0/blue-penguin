@@ -13,7 +13,7 @@
                 <div class="clear"></div>
 
                 <div class="info">
-                    <a href="{{ SITEURL }}/{{ article.url }}">posted at {{ article.date.strftime("%H:%M") }}</a>
+                    posted{% if DISPLAY_AUTHORS and article.authors %} by{% for author in article.authors %}{% if not loop.first %},{% endif %} <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>{% endfor %}</a>{% endif %} at <a href="{{ SITEURL }}/{{ article.url }}">{{ article.date.strftime("%H:%M") }}</a>
                     {% if article.category.name != "misc" %}
                     &nbsp;&middot;&nbsp;<a href="{{ SITEURL }}/{{ article.category.url }}" rel="tag">{{ article.category }}</a>
                     {% endif %}
