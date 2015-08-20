@@ -320,6 +320,35 @@ header h2 {
     text-align: center;
 }
 
+ul.tagcloud {
+    list-style: none;
+    padding: 0;
+}
+
+ul.tagcloud li {
+    display: inline-block;
+}
+
+li.tag-0 {
+    font-size: 200%;
+}
+
+li.tag-1 {
+    font-size: 160%;
+}
+
+li.tag-2 {
+    font-size: 130%;
+}
+
+li.tag-3 {
+    font-size: 100%;
+}
+
+li.tag-4 {
+    font-size: 75%;
+}
+
 code {
     background-color: #F9F2F4;
     border-bottom-left-radius: 4px;
